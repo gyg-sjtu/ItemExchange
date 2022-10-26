@@ -1,16 +1,16 @@
+//â€œä½ å¸®æˆ‘åŠ©â€è½¯ä»¶çš„ä¸»ç¨‹åº
 #include <iostream>
 #include "ItemExchange.h"
 using namespace std;
 
-
 int main() {
-    cout<<"»¶Ó­Ê¹ÓÃ¡°Äã°ïÎÒÖú¡±ÒßÇéÎïÆ·½»»»Èí¼ş!"<<endl;
-    cout<<"ÊäÈëÊı×ÖÑ¡Ôñ¹¦ÄÜ£º"<<endl;
-    cout<<"1-·ÅÈëÎïÆ·"<<endl;
-    cout<<"2-ÏÔÊ¾ÎïÆ·ÁĞ±í"<<endl;
-    cout<<"3-²éÕÒÓëÉ¾³ıÎïÆ·"<<endl;
-    cout<<"4-ÍË³öÏµÍ³"<<endl;
-    cout<<"ºóĞøÄúÊäÈëµÄÖ¸ÁîÎªÊı×Ö»òÓ¢ÎÄ"<<endl;
+    cout<<"æ¬¢è¿ä½¿ç”¨â€œä½ å¸®æˆ‘åŠ©â€ç–«æƒ…ç‰©å“äº¤æ¢è½¯ä»¶!"<<endl;
+    cout<<"è¾“å…¥æ•°å­—é€‰æ‹©åŠŸèƒ½ï¼š"<<endl;
+    cout<<"1-æ”¾å…¥ç‰©å“"<<endl;
+    cout<<"2-æ˜¾ç¤ºç‰©å“åˆ—è¡¨"<<endl;
+    cout<<"3-æŸ¥æ‰¾ä¸åˆ é™¤ç‰©å“"<<endl;
+    cout<<"4-é€€å‡ºç³»ç»Ÿ"<<endl;
+    cout<<"åç»­æ‚¨è¾“å…¥çš„æŒ‡ä»¤ä¸ºæ•°å­—æˆ–è‹±æ–‡"<<endl;
 
     int command=0;
     itemstr item[500];
@@ -18,7 +18,7 @@ int main() {
 
     while(true){
         cin>>command;
-        int itemNum;//case3Ê¹ÓÃ
+        int itemNum;//case3ä½¿ç”¨
         switch(command){
             case 1:
                 addItem(item, num);
@@ -30,7 +30,7 @@ int main() {
             case 3:
                 itemNum = searchItem(item, num);
                 if(itemNum!=-1){
-                    cout<<"ÊÇ·ñĞèÒªÉ¾³ıÎïÆ·£¿(y/n)"<<endl;
+                    cout<<"æ˜¯å¦éœ€è¦åˆ é™¤ç‰©å“ï¼Ÿ(y/n)"<<endl;
                     string flag;
                     cin>>flag;
                     if(flag=="y"){
@@ -43,9 +43,9 @@ int main() {
                 }
                 break;
             case 4: return 0;
-            default: cout<<"Êı×Ö³¬³ö·¶Î§£¬ÇëÖØĞÂÊäÈë£º"<<endl;
+            default: cout<<"æ•°å­—è¶…å‡ºèŒƒå›´ï¼Œè¯·é‡æ–°è¾“å…¥ï¼š"<<endl;
         }
-        cout<<"ÊäÈëÊı×ÖÑ¡Ôñ¹¦ÄÜ£º"<<endl;
+        cout<<"è¾“å…¥æ•°å­—é€‰æ‹©åŠŸèƒ½ï¼š"<<endl;
     }
     return 0;
 }
