@@ -18,13 +18,13 @@ struct itemstr{
 void addItem(itemstr *item, int num){     //添加物品函数
     cout<<"请输入放入物品的名称（英文）："<<endl;
     string name;
-    cin>>name;
+    cin>>name;                //用户输入所放入物品的名称
     cout<<"请输入物品主人的姓名（英文）："<<endl;
-    string ownerName;
-    cin>>ownerName;
+    string ownerName; 
+    cin>>ownerName;           //用户输入所放入物品的拥有者
     cout<<"请输入联系方式："<<endl;
     string contactWay;
-    cin>>contactWay;
+    cin>>contactWay;          //用户输入所放入物品的拥有者联系方式
 
     item[num].itemName = name;
     item[num].owner = ownerName;
@@ -44,15 +44,15 @@ void removeItem(itemstr *item, int itemNum, int num){    //删除物品函数
 int searchItem(itemstr *item, int num){      //查找物品函数
     cout<<"请输入查找物品的名称（英文）："<<endl;
     string name;
-    cin>>name;
+    cin>>name;                //用户输入所查找物品的名称
     cout<<"请输入物品主人的姓名（英文）："<<endl;
     string ownerName;
-    cin>>ownerName;
+    cin>>ownerName;           //用户输入所查找物品的所有者
 
     int i=0;
     while(true){
         if(item[i].itemName==name && item[i].owner==ownerName){      //表示找到了物品
-            cout<<"查找到物品：\n"<<item[i].itemName<<"\t"<<item[i].owner<<"\t"<<item[i].contact<<endl;  //输出物品信息
+            cout<<"查找到物品：\n"<<item[i].itemName<<"\t"<<item[i].owner<<"\t"<<item[i].contact<<endl;  //输出查找的物品信息
             return i;      //返回找到物品的位置
         }
         i++;
@@ -69,6 +69,6 @@ void listItem(itemstr *item, int num){    //显示物品列表函数
     cout<<"物品名称\t"<<"物品主人\t"<<"联系方式"<<endl;
     for(int i=0;i<num;i++){
         cout<<item[i].itemName<<"\t"<<item[i].owner<<"\t"<<item[i].contact<<endl;
-    }                //遍历物品数组，逐一输出
+    }                //遍历物品数组，逐一输出物品信息
     cout<<endl;
 }
