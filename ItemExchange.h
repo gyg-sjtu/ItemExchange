@@ -1,5 +1,5 @@
 //
-// Created by ¹¢ on 2022/10/17.
+// Created by è€¿ on 2022/10/17.
 //
 
 #ifndef ItemExchange_h
@@ -16,20 +16,20 @@ struct itemstr{
 };
 
 void addItem(itemstr *item, int num){
-    cout<<"ÇëÊäÈë·ÅÈëÎïÆ·µÄÃû³Æ£º"<<endl;
+    cout<<"è¯·è¾“å…¥æ”¾å…¥ç‰©å“çš„åç§°ï¼ˆè‹±æ–‡ï¼‰ï¼š"<<endl;
     string name;
     cin>>name;
-    cout<<"ÇëÊäÈëÎïÆ·Ö÷ÈËµÄÐÕÃû£º"<<endl;
+    cout<<"è¯·è¾“å…¥ç‰©å“ä¸»äººçš„å§“åï¼ˆè‹±æ–‡ï¼‰ï¼š"<<endl;
     string ownerName;
     cin>>ownerName;
-    cout<<"ÇëÊäÈëÁªÏµ·½Ê½£º"<<endl;
+    cout<<"è¯·è¾“å…¥è”ç³»æ–¹å¼ï¼š"<<endl;
     string contactWay;
     cin>>contactWay;
 
     item[num].itemName = name;
     item[num].owner = ownerName;
     item[num].contact = contactWay;
-    cout<<"ÎïÆ·ÒÑ³É¹¦Ìí¼Ó\n"<<endl;
+    cout<<"ç‰©å“å·²æˆåŠŸæ·»åŠ \n"<<endl;
 }
 
 void removeItem(itemstr *item, int itemNum, int num){
@@ -38,26 +38,26 @@ void removeItem(itemstr *item, int itemNum, int num){
         item[i].owner = item[i+1].owner;
         item[i].contact = item[i+1].contact;
     }
-    cout<<"ÎïÆ·ÒÑÉ¾³ý\n"<<endl;
+    cout<<"ç‰©å“å·²åˆ é™¤\n"<<endl;
 }
 
 int searchItem(itemstr *item, int num){
-    cout<<"ÇëÊäÈë²éÕÒÎïÆ·µÄÃû³Æ£º"<<endl;
+    cout<<"è¯·è¾“å…¥æŸ¥æ‰¾ç‰©å“çš„åç§°ï¼ˆè‹±æ–‡ï¼‰ï¼š"<<endl;
     string name;
     cin>>name;
-    cout<<"ÇëÊäÈëÎïÆ·Ö÷ÈËµÄÐÕÃû£º"<<endl;
+    cout<<"è¯·è¾“å…¥ç‰©å“ä¸»äººçš„å§“åï¼ˆè‹±æ–‡ï¼‰ï¼š"<<endl;
     string ownerName;
     cin>>ownerName;
 
     int i=0;
     while(true){
         if(item[i].itemName==name && item[i].owner==ownerName){
-            cout<<"²éÕÒµ½ÎïÆ·£º\n"<<item[i].itemName<<"\t"<<item[i].owner<<"\t"<<item[i].contact<<endl;
+            cout<<"æŸ¥æ‰¾åˆ°ç‰©å“ï¼š\n"<<item[i].itemName<<"\t"<<item[i].owner<<"\t"<<item[i].contact<<endl;
             return i;
         }
         i++;
         if(i>=num){
-            cout<<"Î´²éÕÒµ½¸ÃÎïÆ·ÐÅÏ¢\n"<<endl;
+            cout<<"æœªæŸ¥æ‰¾åˆ°è¯¥ç‰©å“ä¿¡æ¯\n"<<endl;
             return -1;
         }
     }
@@ -66,7 +66,7 @@ int searchItem(itemstr *item, int num){
 }
 
 void listItem(itemstr *item, int num){
-    cout<<"ÎïÆ·Ãû³Æ\t"<<"ÎïÆ·Ö÷ÈË\t"<<"ÁªÏµ·½Ê½"<<endl;
+    cout<<"ç‰©å“åç§°\t"<<"ç‰©å“ä¸»äºº\t"<<"è”ç³»æ–¹å¼"<<endl;
     for(int i=0;i<num;i++){
         cout<<item[i].itemName<<"\t"<<item[i].owner<<"\t"<<item[i].contact<<endl;
     }
