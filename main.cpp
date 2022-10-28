@@ -1,5 +1,5 @@
 //“你帮我助”软件的主程序
-//目的：用于添加删除物品的功能
+//目的：用于实现添加删除物品等功能
 //作者：耿一戈
 #include <iostream>
 #include "ItemExchange.h"
@@ -34,11 +34,11 @@ int main() {
                     cout<<"是否需要删除物品？(y/n)"<<endl;
                     string flag;
                     cin>>flag;      //输入是否删除指令
-                    if(flag=="y"){
+                    if(flag=="y"){      //删除物品
                         removeItem(item, itemNum, num);
                         num--;
                     }
-                    else{
+                    else{           //不删除物品
                         cout<<endl;
                     }
                 }
